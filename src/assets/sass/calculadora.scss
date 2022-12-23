@@ -1,8 +1,12 @@
+@use 'mixin';
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 .App {
     background-color: sandybrown;
     width: 100%;
@@ -18,7 +22,9 @@
         background-color: gray;
         padding: 20px;
 
-        .respuesta{
+        @include mixin.medida(320, 580);
+
+        .respuesta {
             width: 100%;
             background-color: rgb(29, 26, 26);
             border: 5px solid black;
@@ -28,7 +34,7 @@
             justify-content: center;
             align-items: center;
 
-            #salida{
+            #salida {
                 background-color: rgb(29, 26, 26);
                 color: white;
                 border: none;
@@ -38,8 +44,8 @@
                 font-size: 48px;
             }
         }
-        
-        .cont-botones{
+
+        .cont-botones {
             margin-top: 20px;
             width: 100%;
             height: 63vh;
@@ -50,7 +56,14 @@
             row-gap: 20px;
             column-gap: 20px;
 
-            .boton1{
+            @media screen and (max-width: 375px) {
+                grid-template-columns: repeat(4, 50px);
+                grid-template-rows: repeat(5, 50px);
+                padding: 20px 5px;
+                height: 55vh;
+            }
+
+            .boton1 {
                 height: 60px;
                 background-color: wheat;
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -58,6 +71,12 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+
+                @include mixin.medida(60, 40);
+
+                &:hover {
+                    box-shadow: 0px 0px 10px 5px black;
+                }
             }
         }
     }

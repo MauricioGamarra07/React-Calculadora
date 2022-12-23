@@ -4,7 +4,7 @@ function Respuesta() {
   return (
     <div>
       <div className="respuesta">
-        <input type="text" placeholder='0' disabled="true" id='salida'/>
+        <input type="text" placeholder='0' disabled={true} id='salida'/>
       </div>
     </div>
   )

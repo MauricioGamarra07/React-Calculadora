@@ -1,0 +1,6 @@
+@mixin medida ($ancho, $largo){
+    @media screen and (max-width: 375px) {
+        width: $ancho + px;
+        height: $largo + px;
+    }
+}
