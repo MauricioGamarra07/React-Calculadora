@@ -1,5 +1,6 @@
 @use 'mixin';
 
+$color-negro: rgb(29, 26, 26);
 
 * {
     margin: 0;
@@ -26,22 +27,33 @@
 
         .respuesta {
             width: 100%;
-            background-color: rgb(29, 26, 26);
+            background-color: $color-negro;
             border: 5px solid black;
             height: 140px;
             border-radius: 15px;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
 
             #salida {
-                background-color: rgb(29, 26, 26);
+                background-color: $color-negro;
                 color: white;
                 border: none;
                 width: 100%;
-                padding: 15px;
+                padding: 10px;
                 text-align: end;
-                font-size: 48px;
+                font-size: 40px;
+            }
+
+            #solucion{
+                background-color: $color-negro;
+                color: blue;
+                border: none;
+                width: 100%;
+                padding: 10px;
+                text-align: end;
+                font-size: 24px;
             }
         }
 
